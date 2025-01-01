@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm">
+        <div class="container">
+          <a class="navbar-brand" href="#">DriveX</a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0 fs-5">
+              <li class="nav-item">
+                <a
+                  class="nav-link active bi bi-house-door"
+                  href="#"
+                  aria-current="page"
+                  >HOME
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#service">SERVICE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#featured-cars">FEATURED CARS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#new-cars">NEW CARS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-us">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#brand">BRAND</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">CONTACT</a>
+              </li>
+
+              <li id="registerLink" class="nav-item">
+                <a class="nav-link" href="/register">REGISTER</a>
+              </li>
+              <li id="loginLink" class="nav-item">
+                <a class="nav-link" href="/login">LOGIN</a>
+              </li>
+
+              <li id="avatarLi" class="nav-item dropdown" style="display: none">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="avatarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <div id="avatar" class="avatar"></div>
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="avatarDropdown"
+                  style="
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    transform: translateX(-25%);
+                  "
+                >
+                  <li>
+                    <a class="dropdown-item" href="/profile">Profile</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <button id="logoutBtn" class="dropdown-item">
+                      Log Out
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="bg-banner">
+        <div class="banner-content text-center">
+          <div class="overlay"></div>
+          <h1>Welcome to Our Car Shop!</h1>
+          <p>Explore our latest cars and exclusive offers!</p>
+        </div>
+      </div>
+      <div class="row form">
+        <div class="row mb-4">
+          <div class="col-md-3">
+            <label for="selectYear" class="form-label">Select Year</label>
+            <select id="selectYear" class="form-select">
+              <option selected>Year</option>
+              <option>2023</option>
+              <option>2022</option>
+              <option>2021</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="selectMake" class="form-label">Select Make</label>
+            <select id="selectMake" class="form-select">
+              <option selected>Make</option>
+              <option>Toyota</option>
+              <option>Honda</option>
+              <option>Ford</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <label for="selectModel" class="form-label">Select Model</label>
+            <select id="selectModel" class="form-select">
+              <option selected>Model</option>
+              <option>Camry</option>
+              <option>Civic</option>
+              <option>Mustang</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="search-btn-container">
+          <button
+            class="btn btn-primary btn-sm fs-5"
+            style="padding: 15px 40px"
+          >
+            Search
+          </button>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-3">
+            <label for="selectColor" class="form-label">Select Color</label>
+            <select id="selectColor" class="form-select">
+              <option selected>Color</option>
+              <option>Red</option>
+              <option>Blue</option>
+              <option>Black</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="selectColor" class="form-label">Car Condition</label>
+            <select id="selectColor" class="form-select">
+              <option selected>Condition</option>
+              <option>...</option>
+              <option>...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="selectPrice" class="form-label"
+              >Select Price Range</label
+            >
+            <select id="selectPrice" class="form-select">
+              <option selected>Price Range</option>
+              <option>$20,000 - $30,000</option>
+              <option>$30,000 - $40,000</option>
+              <option>$40,000+</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="service" class="container">
+        <div class="row gx-4">
+          <div class="col-md-4">
+            <div class="card custom-card text-center p-4">
+              <i class="bi bi-car-front" style="font-size: 4.5rem"></i>
+              <div class="card-body">
+                <h4 class="card-title">Largest Dealership of Car</h4>
+                <p class="card-text text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti ullam ducimus suscipit modi incidunt.
+                </p>
+                <div class="card-divider mx-auto my-3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card custom-card text-center p-4">
+              <i class="bi bi-tools" style="font-size: 4.5rem"></i>
+              <div class="card-body">
+                <h4 class="card-title">Unlimited Repair Warrenty</h4>
+                <p class="card-text text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti ullam ducimus suscipit modi incidunt.
+                </p>
+                <div class="card-divider mx-auto my-3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card custom-card text-center p-4">
+              <i class="bi bi-house-heart" style="font-size: 4.5rem"></i>
+              <div class="card-body">
+                <h4 class="card-title">Insurence Support</h4>
+                <p class="card-text text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti ullam ducimus suscipit modi incidunt.
+                </p>
+                <div class="card-divider mx-auto my-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="new-cars" id="new-cars">
+        <p class="fs-5">Checkout the Lastest Cars</p>
+        <h1>Newest Cars</h1>
+        <div class="product-line-divider mx-auto my-3"></div>
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+          <ol class="carousel-indicators">
+            <li
+              data-bs-target="#carouselId"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="First slide"
+            ></li>
+            <li
+              data-bs-target="#carouselId"
+              data-bs-slide-to="1"
+              aria-label="Second slide"
+            ></li>
+            <li
+              data-bs-target="#carouselId"
+              data-bs-slide-to="2"
+              aria-label="Third slide"
+            ></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <div class="row m gap-0">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/ncm1.png"
+                    class="w-100 d-block"
+                    alt="First slide"
+                    height="300px"
+                  />
+                </div>
+                <div class="col-md-4 text-start">
+                  <h3>Chevrolet Camaro ZA100</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Molestiae aspernatur reiciendis quae quo non. Mollitia
+                    voluptate rerum debitis eaque nemo magnam ex sunt ipsum.
+                    Architecto qui animi ratione maxime rerum?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Molestiae aspernatur reiciendis quae quo non.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-primary py-3 px-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailsModal"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row m gap-0">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/ncm2.png"
+                    class="w-100 d-block"
+                    alt="First slide"
+                    height="300px"
+                  />
+                </div>
+                <div class="col-md-4 text-start">
+                  <h3>BMW Series-3 Wagon</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Molestiae aspernatur reiciendis quae quo non. Mollitia
+                    voluptate rerum debitis eaque nemo magnam ex sunt ipsum.
+                    Architecto qui animi ratione maxime rerum?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Molestiae aspernatur reiciendis quae quo non.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-primary py-3 px-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailsModal"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row m gap-0">
+                <div class="col-md-6">
+                  <img
+                    src="./assets/ncm3.png"
+                    class="w-100 d-block"
+                    alt="First slide"
+                    height="300px"
+                  />
+                </div>
+                <div class="col-md-4 text-start">
+                  <h3>Ferrari 488 Superfast</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Molestiae aspernatur reiciendis quae quo non. Mollitia
+                    voluptate rerum debitis eaque nemo magnam ex sunt ipsum.
+                    Architecto qui animi ratione maxime rerum?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Molestiae aspernatur reiciendis quae quo non.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-primary py-3 px-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailsModal"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselId"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselId"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="bg-featured-cars">
+        <section class="featured-cars container text-center" id="featured-cars">
+          <p class="fs-5">Checkout the Featured Cars</p>
+          <h1>Featured Cars</h1>
+          <div class="product-line-divider mx-auto my-3"></div>
+          <div class="row mb-5">
+            <div class="col-md-3">
+              <div class="card card-products">
+                <div
+                  class="card-body p-4 d-flex justify-content-center align-items-center"
+                >
+                  <img class="card-img-top" src="./assets/fc1.png" alt="" />
+                </div>
+                <div class="card-footer text-start ps-6">
+                  <p>Model: 2017 3100 Mi 240HP</p>
+                  <p>Automatic</p>
+                </div>
+              </div>
+              <div class="sub-description">
+                <h6>BMW 6-Series Gran Coupe</h6>
+                <p class="fw-bold">$89,395</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus vero ullam.
+                </p>
+                <button
+                  class="btn btn-info w-100 mt-3 text-white"
+                  style="font-size: 1.1rem"
+                  onclick="handleBuyNow()"
+                >
+                  Buy now
+                </button>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card card-products">
+                <div
+                  class="card-body p-4 d-flex justify-content-center align-items-center"
+                >
+                  <img class="card-img-top" src="./assets/fc2.png" alt="" />
+                </div>
+                <div class="card-footer text-start ps-6">
+                  <p>Model: 2017 3100 Mi 240HP</p>
+                  <p>Automatic</p>
+                </div>
+              </div>
+              <div class="sub-description">
+                <h6 class="text-capitalize">chevrolet camaro wmv20</h6>
+                <p class="fw-bold">$66,575</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus vero ullam.
+                </p>
+                <button
+                  class="btn btn-info w-100 mt-3 text-white"
+                  style="font-size: 1.1rem"
+                  onclick="handleBuyNow()"
+                >
+                  Buy now
+                </button>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card card-products">
+                <div
+                  class="card-body p-4 d-flex justify-content-center align-items-center"
+                >
+                  <img class="card-img-top" src="./assets/fc3.png" alt="" />
+                </div>
+                <div class="card-footer text-start ps-6">
+                  <p>Model: 2017 3100 Mi 240HP</p>
+                  <p>Automatic</p>
+                </div>
+              </div>
+              <div class="sub-description">
+                <h6 class="text-capitalize">lamborghini v520</h6>
+                <p class="fw-bold">$125,250</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus vero ullam.
+                </p>
+                <button
+                  class="btn btn-info w-100 mt-3 text-white"
+                  style="font-size: 1.1rem"
+                  onclick="handleBuyNow()"
+                >
+                  Buy now
+                </button>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card card-products">
+                <div
+                  class="card-body p-4 d-flex justify-content-center align-items-center"
+                >
+                  <img class="card-img-top" src="./assets/fc4.png" alt="" />
+                </div>
+                <div class="card-footer text-start ps-6">
+                  <p>Model: 2017 3100 Mi 240HP</p>
+                  <p>Automatic</p>
+                </div>
+              </div>
+              <div class="sub-description">
+                <h6 class="text-capitalize">audi a3 sedan</h6>
+                <p class="fw-bold">$95,500</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus vero ullam.
+                </p>
+                <button
+                  class="btn btn-info w-100 mt-3 text-white"
+                  style="font-size: 1.1rem"
+                  onclick="handleBuyNow()"
+                >
+                  Buy now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card card-products">
+                <div
+                  class="card-body p-4 d-flex justify-content-center align-items-center"
+                >
+                  <img class="card-img-top" src="./assets/fc5.png" alt="" />
+                </div>
+                <div class="card-footer text-start ps-6">
+                  <p>Model: 2017 3100 Mi 240HP</p>
+                  <p>Automatic</p>
+                </div>
+              </div>
+              <div class="sub-description">
+                <h6 class="text-capitalize">infiniti z5</h6>
+                <p class="fw-bold">$36,850</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus vero ullam.
+                </p>
+                <button
+                  class="btn btn-info w-100 mt-3 text-white"
+                  style="font-size: 1.1rem"
+                  onclick="handleBuyNow()"
+                >
+                  Buy now
+                </button>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card card-products">
+                <div
+                  class="card-body p-4 d-flex justify-content-center align-items-center"
+                >
+                  <img class="card-img-top" src="./assets/fc6.png" alt="" />
+                </div>
+                <div class="card-footer text-start ps-6">
+                  <p>Model: 2017 3100 Mi 240HP</p>
+                  <p>Automatic</p>
+                </div>
+              </div>
+              <div class="sub-description">
+                <h6 class="text-capitalize">porsche 718 cayman</h6>
+                <p class="fw-bold">$48,500</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus vero ullam.
+                </p>
+                <button
+                  class="btn btn-info w-100 mt-3 text-white"
+                  style="font-size: 1.1rem"
+                  onclick="handleBuyNow()"
+                >
+                  Buy now
+                </button>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card card-products">
+                <div
+                  class="card-body p-4 d-flex justify-content-center align-items-center"
+                >
+                  <img class="card-img-top" src="./assets/fc7.png" alt="" />
+                </div>
+                <div class="card-footer text-start ps-6">
+                  <p>Model: 2017 3100 Mi 240HP</p>
+                  <p>Automatic</p>
+                </div>
+              </div>
+              <div class="sub-description">
+                <h6 class="text-capitalize">bmw 8-series coupe</h6>
+                <p class="fw-bold">$56,000</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus vero ullam.
+                </p>
+                <button
+                  class="btn btn-info w-100 mt-3 text-white"
+                  style="font-size: 1.1rem"
+                  onclick="handleBuyNow()"
+                >
+                  Buy now
+                </button>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card card-products">
+                <div
+                  class="card-body p-4 d-flex justify-content-center align-items-center"
+                >
+                  <img class="card-img-top" src="./assets/fc8.png" alt="" />
+                </div>
+                <div class="card-footer text-start ps-6">
+                  <p>Model: 2017 3100 Mi 240HP</p>
+                  <p>Automatic</p>
+                </div>
+              </div>
+              <div class="sub-description">
+                <h6 class="text-capitalize">BMW xseries-6</h6>
+                <p class="fw-bold">$75,800</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus vero ullam.
+                </p>
+                <button
+                  class="btn btn-info w-100 mt-3 text-white"
+                  style="font-size: 1.1rem"
+                  onclick="handleBuyNow()"
+                >
+                  Buy now
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="bg-best-selling-products">
+        <section class="container best-selling-products">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="list-group small mb-3">
+                <div class="list-group-item text-bg-light fw-bold">
+                  Product Categories
+                </div>
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                >
+                  Best Sellers
+                  <span class="badge text-bg-warning rounded-pill">14</span>
+                </a>
+                <a
+                  href="#"
+                  class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                >
+                  New Arrivals
+                  <span class="badge text-bg-warning rounded-pill">1</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div
+                class="list-group-item bg-list fw-bold d-flex justify-content-between align-items-center"
+              >
+                List of Best-Selling Products
+                <span class="badge text-bg-warning rounded-pill"
+                  >24 Products Available</span
+                >
+              </div>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="row align-items-center g-3">
+                  <div class="col-md-4">
+                    <div class="course-image-holder">
+                      <img
+                        class="rounded img-fluid mb-md-0 mt-md-> mt-2"
+                        src="./assets/fc1.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <h5>BMW 6-Series Gran Coupe</h5>
+                    <p class="text-secondary">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Exercitationem fuga excepturi accusamus deserunt quasi
+                      earum facilis ducimus rerum.
+                    </p>
+                    <p class="d-inline-flex align-items-center">
+                      <span
+                        class="me-2 rounded-pill text-bg-warning px-2 py-1 small d-inline-flex align-items-center"
+                      >
+                        <i class="bi bi-star-fill mx-1"></i> Rating: 4.7
+                      </span>
+                      <span
+                        class="rounded-pill text-bg-success px-2 py-1 small"
+                      >
+                        $89,395
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="row align-items-center g-3">
+                  <div class="col-md-4">
+                    <div class="course-image-holder">
+                      <img
+                        class="rounded img-fluid mb-md-0 mt-md-> mt-2"
+                        src="./assets/fc2.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <h5 class="text-capitalize">chevrolet camaro wmv20</h5>
+                    <p class="text-secondary">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Exercitationem fuga excepturi accusamus deserunt quasi
+                      earum facilis ducimus rerum.
+                    </p>
+                    <p class="d-inline-flex align-items-center">
+                      <span
+                        class="me-2 rounded-pill text-bg-warning px-2 py-1 small d-inline-flex align-items-center"
+                      >
+                        <i class="bi bi-star-fill mx-1"></i> Rating: 4.7
+                      </span>
+                      <span
+                        class="rounded-pill text-bg-success px-2 py-1 small"
+                      >
+                        $66,575
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="row align-items-center g-3">
+                  <div class="col-md-4">
+                    <div class="course-image-holder">
+                      <img
+                        class="rounded img-fluid mb-md-0 mt-md-> mt-2"
+                        src="./assets/fc3.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <h5 class="text-capitalize">lamborghini v520</h5>
+                    <p class="text-secondary">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Exercitationem fuga excepturi accusamus deserunt quasi
+                      earum facilis ducimus rerum.
+                    </p>
+                    <p class="d-inline-flex align-items-center">
+                      <span
+                        class="me-2 rounded-pill text-bg-warning px-2 py-1 small d-inline-flex align-items-center"
+                      >
+                        <i class="bi bi-star-fill mx-1"></i> Rating: 4.7
+                      </span>
+                      <span
+                        class="rounded-pill text-bg-success px-2 py-1 small"
+                      >
+                        $125,250
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="container my-5" id="about-us">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="fw-bold">About DriveX</h2>
+            <p class="text-justify">
+              DriveX is a brand specializing in providing the most modern and
+              high-end car lines. With the mission of bringing the best
+              experience to customers, we are proud to be the distributor of the
+              world's leading car brands.
+            </p>
+            <p class="text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur, nulla explicabo quas voluptatem magnam eveniet, quod,
+              sequi expedita eaque corrupti aliquid obcaecati? Mollitia porro
+              fugiat praesentium placeat, sapiente deserunt accusantium?
+            </p>
+            <p class="text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur, nulla explicabo quas voluptatem magnam eveniet, quod,
+              sequi expedita eaque corrupti aliquid obcaecati? Mollitia porro
+              fugiat praesentium placeat, sapiente deserunt accusantium?
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="./assets/about_us.jpg"
+              alt="About DriveX"
+              class="img-fluid rounded shadow-sm"
+            />
+          </div>
+        </div>
+      </div>
+
+      <section class="client-side">
+        <h2 class="text-capitalize text-center">what our clients say</h2>
+        <div class="product-line-divider mx-auto mt-3 mb-5"></div>
+        <div
+          id="carouselId"
+          class="carousel slide container"
+          data-bs-ride="carousel"
+        >
+          <!-- <ol class="carousel-indicators">
+            <li
+              data-bs-target="#carouselId"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="First slide"
+            ></li>
+            <li
+              data-bs-target="#carouselId"
+              data-bs-slide-to="1"
+              aria-label="Second slide"
+            ></li>
+            <li
+              data-bs-target="#carouselId"
+              data-bs-slide-to="2"
+              aria-label="Third slide"
+            ></li>
+          </ol> -->
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card clients-card text-center">
+                    <img
+                      class="card-img-top mx-auto my-3"
+                      src="./assets/c1.png"
+                      alt="Title"
+                      style="width: 70px"
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem deserunt, nihil ad aliquid a earum ipsa iusto
+                        perferendis illum asperiores.
+                      </p>
+                      <h5 class="card-title fw-bolder">
+                        Tomas Lili <br />
+                        New York
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card clients-card text-center">
+                    <img
+                      class="card-img-top mx-auto my-3"
+                      src="./assets/c2.png"
+                      alt="Title"
+                      style="width: 70px"
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem deserunt, nihil ad aliquid a earum ipsa iusto
+                        perferendis illum asperiores.
+                      </p>
+                      <h5 class="card-title fw-bolder">
+                        Romi Rain <br />
+                        London
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card clients-card text-center">
+                    <img
+                      class="card-img-top mx-auto my-3"
+                      src="./assets/c3.png"
+                      alt="Title"
+                      style="width: 70px"
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem deserunt, nihil ad aliquid a earum ipsa iusto
+                        perferendis illum asperiores.
+                      </p>
+                      <h5 class="card-title fw-bolder">
+                        John Doe <br />
+                        Washington
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card clients-card text-center">
+                    <img
+                      class="card-img-top mx-auto my-3"
+                      src="./assets/c1.png"
+                      alt="Title"
+                      style="width: 70px"
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem deserunt, nihil ad aliquid a earum ipsa iusto
+                        perferendis illum asperiores.
+                      </p>
+                      <h5 class="card-title fw-bolder">
+                        Tomas Lili <br />
+                        New York
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card clients-card text-center">
+                    <img
+                      class="card-img-top mx-auto my-3"
+                      src="./assets/c2.png"
+                      alt="Title"
+                      style="width: 70px"
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem deserunt, nihil ad aliquid a earum ipsa iusto
+                        perferendis illum asperiores.
+                      </p>
+                      <h5 class="card-title fw-bolder">
+                        Romi Rain <br />
+                        London
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card clients-card text-center">
+                    <img
+                      class="card-img-top mx-auto my-3"
+                      src="./assets/c3.png"
+                      alt="Title"
+                      style="width: 70px"
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem deserunt, nihil ad aliquid a earum ipsa iusto
+                        perferendis illum asperiores.
+                      </p>
+                      <h5 class="card-title fw-bolder">
+                        John Doe <br />
+                        Washington
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card clients-card text-center">
+                    <img
+                      class="card-img-top mx-auto my-3"
+                      src="./assets/c1.png"
+                      alt="Title"
+                      style="width: 70px"
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem deserunt, nihil ad aliquid a earum ipsa iusto
+                        perferendis illum asperiores.
+                      </p>
+                      <h5 class="card-title fw-bolder">
+                        Tomas Lili <br />
+                        New York
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card clients-card text-center">
+                    <img
+                      class="card-img-top mx-auto my-3"
+                      src="./assets/c2.png"
+                      alt="Title"
+                      style="width: 70px"
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem deserunt, nihil ad aliquid a earum ipsa iusto
+                        perferendis illum asperiores.
+                      </p>
+                      <h5 class="card-title fw-bolder">
+                        Romi Rain <br />
+                        London
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card clients-card text-center">
+                    <img
+                      class="card-img-top mx-auto my-3"
+                      src="./assets/c3.png"
+                      alt="Title"
+                      style="width: 70px"
+                    />
+                    <div class="card-body">
+                      <p class="card-text text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem deserunt, nihil ad aliquid a earum ipsa iusto
+                        perferendis illum asperiores.
+                      </p>
+                      <h5 class="card-title fw-bolder">
+                        John Doe <br />
+                        Washington
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselId"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselId"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section
+        class="container brand d-flex align-items-center justify-content-center"
+        id="brand"
+      >
+        <div class="row">
+          <div class="col-md-2 p-5">
+            <img src="./assets/br1.png" alt="" />
+          </div>
+          <div class="col-md-2 p-5">
+            <img src="./assets/br2.png" alt="" />
+          </div>
+          <div class="col-md-2 p-5">
+            <img src="./assets/br3.png" alt="" />
+          </div>
+          <div class="col-md-2 p-5">
+            <img src="./assets/br4.png" alt="" />
+          </div>
+          <div class="col-md-2 p-5">
+            <img src="./assets/br5.png" alt="" />
+          </div>
+          <div class="col-md-2 p-5">
+            <img src="./assets/br6.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="contact">
+      <div
+        class="footer container d-flex align-items-center justify-content-center"
+      >
+        <div class="row">
+          <div class="col-md-3">
+            <h2 class="fw-bold">DriveX</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
+              optio, earum recusandae.
+            </p>
+            <p>
+              support@drivex.com <br />
+              +1 800-123-4567
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h5 class="text-uppercase fw-bold">About</h5>
+            <a href="#">About Us </a>
+            <a href="#">Career</a>
+            <a href="#"> Terms of service</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+          <div class="col-md-3">
+            <h5 class="text-uppercase fw-bold">top brands</h5>
+            <a href="#">BMW </a>
+            <a href="#">Lamborghini</a>
+            <a href="#"> Audi</a>
+            <a href="#">Infiniti</a>
+            <a href=""> Nissan</a>
+          </div>
+          <div class="col-md-3">
+            <h5 class="text-uppercase fw-bold">news letter</h5>
+            <p>Subscribe to get latest news update and informations</p>
+            <div class="form-email">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Add Email"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="padding-bottom: 10px">
+        <hr class="footer-divider" />
+        <p>&copy; 2024 DriveX. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        var navbar = document.querySelector(".navbar");
+        if (window.scrollY > 0) {
+          navbar.classList.add("navbar-scrolled");
+        } else {
+          navbar.classList.remove("navbar-scrolled");
+        }
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const userLoggedIn = sessionStorage.getItem("userLoggedIn") === "true";
+      window.onload = function () {
+        if (userLoggedIn) {
+          updateMenu();
+        } else {
+          document.getElementById("loginLink").style.display = "block";
+          document.getElementById("registerLink").style.display = "block";
+          document.getElementById("avatarLi").style.display = "none";
+        }
+      };
+
+      function updateMenu() {
+        document.getElementById("loginLink").style.display = "none";
+        document.getElementById("registerLink").style.display = "none";
+
+        const avatarLi = document.getElementById("avatarLi");
+        avatarLi.style.display = "block";
+
+        const userAvatar =
+          sessionStorage.getItem("userAvatar") || "./assets/default.jpg";
+        const avatar = document.getElementById("avatar");
+        avatar.style.backgroundImage = `url('${userAvatar}')`;
+        avatar.style.backgroundSize = "cover";
+
+        document
+          .getElementById("logoutBtn")
+          .addEventListener("click", function () {
+            sessionStorage.clear();
+            window.location.href = "/";
+            sessionStorage.clear();
+          });
+      }
+      function handleBuyNow() {
+        if (userLoggedIn) {
+          window.location.href = "cart.html";
+        } else {
+          alert("Vui lòng đăng nhập để tiếp tục mua hàng!");
+          window.location.href = "/login";
+        }
+      }
+    </script>
+  </body>
+</html>
+<div
+  class="modal fade"
+  id="detailsModal"
+  tabindex="-1"
+  aria-labelledby="detailsModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="detailsModalLabel">
+          Ferrari 488 Superfast
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- Accordion Structure -->
+        <div class="accordion" id="carDetailsAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Tính năng vượt trội
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#carDetailsAccordion"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus, voluptas, magnam error fugiat nemo cumque earum
+                beatae amet rerum vel ratione. Voluptatibus quidem rem dolorum
+                aspernatur laudantium numquam consequatur ducimus?
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Động cơ
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#carDetailsAccordion"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis
+                maxime quos, eveniet voluptates quasi tempora quam nobis. Saepe,
+                earum in eaque sed eius quasi obcaecati. Temporibus
+                necessitatibus soluta commodi ipsum.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Ưu điểm
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#carDetailsAccordion"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+                odio architecto laboriosam sit qui ab. Voluptas, iste nemo esse
+                quae sint reprehenderit animi officiis eveniet, quos unde
+                cupiditate distinctio sunt.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="related-products">
+          <h4 class="text-warning">Các sản phẩm liên quan</h4>
+          <div class="row gx-3">
+            <div class="col-md-4">
+              <div class="card related-products-card">
+                <img
+                  class="card-img-top img-thumbnail p-3"
+                  src="./assets/ncm1.png"
+                  alt="Title"
+                />
+                <p class="card-text text-center text-secondary">
+                  Chevrolet Camaro ZA100
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card related-products-card">
+                <img
+                  class="card-img-top img-thumbnail p-3"
+                  src="./assets/ncm2.png"
+                  alt="Title"
+                />
+                <p class="card-text text-center text-secondary">
+                  BMW Series-3 Wagon
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card related-products-card">
+                <img
+                  class="card-img-top img-thumbnail p-3"
+                  src="./assets/ncm3.png"
+                  alt="Title"
+                />
+                <p class="card-text text-center text-secondary">
+                  Ferrari 488 Superfast
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
